@@ -1,0 +1,45 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: content-box;
+}
+
+:root{
+	--blanco: #f0f0f2;
+	--verde: #00ff00;
+	--negro: #151515;
+    --rosa: #f5cae8;
+}
+
+body {
+	background-color: var(--negro);
+	text-align: center;
+	color: var(--rosa);
+}
+
+h1 {
+	color: var(--blanco);
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: var(--blanco);
+	text-align: left;
+	text-transform: capitalize;
+	font-size: 2em;
+}
+
+p {
+	color: var(--rosa);
+	text-align: left;
+	font-size: 2em;
+}
+
+i {
+	color: var(--verde);
+}
+
+.script {
+	color: var(--verde);
+}

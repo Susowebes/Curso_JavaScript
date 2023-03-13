@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+       <script type="text/javascript" src=""></script>
+        <title>javascript tutorizado</title>
+    </head>
+    
+    <body style="font-size: 48px; 
+      			 background-color: #000; 
+      			 color: lime; 
+      			 padding: 20px;">
+      			 
+       <script type="text/javascript">
+       	
+		   let edad=prompt("Introduce la edad por favor.");
+		   
+		   if(edad>=18){
+			  
+			   document.write("Eres mayor de edad. <br>");
+				   
+			   let ahorros=prompt("Introduce tu dinero disponible.");
+			   
+			   if(ahorros>=150){
+				  
+				  document.write("Tienes el dinero necesario. <br>");
+			      document.write("Puedes obtener el carnet.");
+				  
+				  }else{
+					  
+				   		document.write("Pero... " + "No tienes suficiente dinero. <br>");	  
+					  	document.write("Vuelve cuando lo consigas." + "<br>" + "Te estaremos esperando.");
+				  }
+				   			   
+			  }else{
+				  
+				    let edadCandidato=18-edad;
+		   			document.write("Aun no tienes edad suficiente. <br>");
+				  	//document.write("Vuelve dentro de " + edadCandidato + " años.");
+				  	document.write(`Vuelve dentro de ${edadCandidato} años.`);// Para poder usar una variable dentro de un string sin usar concatenadores.
+				  
+			  }
+		   
+		   document.write("<br>");
+		   document.write("Acabamos de evaluar la edad del candidato.");
+		   
+		   
+		   
+		   
+       </script>
+    </body>
+</html>

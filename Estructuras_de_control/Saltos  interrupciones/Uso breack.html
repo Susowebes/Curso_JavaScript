@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso breack</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Uso de breack</h1>
+    <br>
+    <script type="text/javascript">
+
+        //Las partes comentadas son lo nuevo del ejemplo para breack.
+        let mail=prompt("Escribe tu correo por favor.");
+
+        let arroba=false;
+
+        for(let i=0; i<(mail.length); i++){
+
+            //Con esta instrucción amos a recorrer el texto en busca de la @
+            document.write("Evaluando caracter " +  i  +  " " + mail[i] + " del email <br>");
+
+            if(mail[i] == "@"){
+
+                arroba=true;
+
+                //con esta instrucción nos avisa si la @ apareció.
+                document.write("!ARROBA ENCONTRADA¡ <br>");
+
+                //Una vez encontrada la @ rompemos el código así.
+                //break;
+
+            }
+
+        }
+
+        if(arroba){
+
+            document.write("Email correcto.");
+
+        }else{
+
+            document.write("Email incorrecto.");
+
+        }
+
+    </script>
+</body>
+</html>

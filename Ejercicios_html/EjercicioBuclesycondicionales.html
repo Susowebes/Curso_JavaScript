@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Usos do while</title>
+    </head>
+    
+    <body style="background-color: #000000;
+       color: lime;
+       font-size: 3em;
+       text-align: center;">
+       
+       <script type="text/javascript">
+       	
+		   document.write("Calcula el número <br>");		   
+		   
+		   let numeroAleatorio=Math.round(Math.random()*100);
+		   let miNumero=0;
+		   let intentos=0;
+		   
+		    do{
+				
+				miNumero=prompt("Introduce un nº entre 0 y 100");
+				
+				if(numeroAleatorio>miNumero){
+				   
+				   alert("más alto");
+				   
+				   } 
+				if(numeroAleatorio<miNumero){
+							
+							alert("más bajo");
+							
+				   }
+				intentos++;
+				
+			}while(numeroAleatorio!=miNumero);
+		   
+		   document.write("¡CORRECTO! <br>");
+		   document.write("El número es " + numeroAleatorio + "<br>");
+		   document.write("Lo has adivinado en " + intentos + " intentos.");
+		   
+		   
+       </script>
+        
+    </body>
+</html>

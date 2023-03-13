@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Desafio Javascript</title>
+    </head>
+    
+    <body style="background-color: #000000;
+       color: lime;
+       font-size: 48px;
+       text-align: center;">
+       
+        <h1 style="text-transform: uppercase">Comprueba tu calificación</h1>
+        
+        <br>
+        
+       <!--<script type="text/javascript">
+       
+       // Usando (switch case)
+       	
+		   let puntuacion=prompt("Escribe tu calificación");
+		   
+		   document.write(`Tienes un   "${puntuacion}" de puntuación.`);
+		   document.write("<br>");
+		   document.write("<br>");
+		   switch(true){
+			
+			   case puntuacion<5:
+		   	   		document.write("Lo siento ¡has suspendido!");
+				   	break;
+				   
+			   case puntuacion<6:
+			  		document.write("¡Enhorabuena has aprobado!" + "<br>");
+			  		document.write("Has sacado ¡SUFICIENTE!");
+				   	break;
+				   
+			   case puntuacion<7:
+				    document.write("¡Enhorabuena has aprobado!" + "<br>");
+		   	   		document.write("Has sacado ¡BIEN!");
+				   	break;
+				   
+			   case puntuacion<9:
+				    document.write("¡Enhorabuena has aprobado!" + "<br>");
+		   	   		document.write("Has sacado ¡NOTABLE!");
+				   	break;
+				   
+			   case puntuacion<=10:
+				    document.write("¡Enhorabuena has aprobado!" + "<br>");
+		   	   		document.write("Has sacado ¡SOBRESALIENTE!");
+				   	break;
+				   
+			   default:
+				   	document.write("Esta puntuación no es valida.");
+		   }
+		   
+       </script>-->
+         
+        <script type="text/javascript">
+			
+       	// Usando (if else)
+			
+		   let puntuacion=prompt("Escribe tu calificación");
+		   
+		   document.write(`Tienes un   "${puntuacion}" de puntuación.`);
+		   document.write("<br>");
+		   document.write("<br>");
+		   
+		   if(puntuacion<5){
+			   
+		   	   document.write("Lo siento ¡has suspendido!");
+															   
+		   }else if(puntuacion<6){
+				   
+			  document.write("¡Enhorabuena has aprobado!" + "<br>");
+			  document.write("Has sacado ¡SUFICIENTE!");
+				   
+		   }else if(puntuacion<7){
+				   
+			  document.write("¡Enhorabuena has aprobado!" + "<br>");
+			  document.write("Has sacado ¡BIEN!");
+				   
+		   }else if(puntuacion<9){
+				   
+			  document.write("¡Enhorabuena has aprobado!" + "<br>");
+			  document.write("Has sacado ¡NOTABlE!");
+				   
+		   }else if(puntuacion<11){
+				   
+		      document.write("¡Enhorabuena has aprobado!" + "<br>");
+			  document.write("Has sacado ¡SOBRESALIENTE!");
+				   
+		   }else if(puntuacion>10){document.write("Esta puntuación no es valida.");}
+			   								  			  
+       </script>
+       
+    </body>
+</html>

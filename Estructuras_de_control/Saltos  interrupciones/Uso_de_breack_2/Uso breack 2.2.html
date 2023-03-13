@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso breack 2.2</title>
+    <link rel="stylesheet" href="../CSS/stylo.css">
+</head>
+<body>
+    <h1>Uso de breack 2.2</h1>
+    <br>
+    <script type="text/javascript">
+
+        //Declara un array vacio llamado "naciones".
+        let naciones=[];
+
+        //Declara una variable llamada "i" para conocer las posiciones del array "naciones".
+        let i=0;
+
+        //Se mete en un bucle infinito.
+        while(true){
+
+           //Me pide nombres de paises sin parar.
+           naciones[i]=prompt("Introduzca una nación por favor. \nPulse cancelar para salir.");
+
+            //Hasta que introduzcamos uno de los nombres seleccionados entre las comillas.
+            if(naciones[i] == "ukrania" || naciones[i] == "Portugal" || naciones[i] == "España" || naciones[i] == "Ukrania" || naciones[i] == "China" || naciones[i] == "Spain"){
+
+                //Si se escribe un resultado correcto me lo imprime.
+                document.write(i + " ¡ENCONTRADO! " + naciones[i] + "<br>");
+
+                //Una vez encontrado sae detiene automaticamente.
+                break;
+
+            //Texto que se imprime hasta que no aparezca lo buscado.
+            }else{document.write(i + " ¡NO ENCONTRADO! " + naciones[i] + "<br>");}
+           
+            i+=1;
+         
+        }
+
+    </script>
+</body>
+</html>

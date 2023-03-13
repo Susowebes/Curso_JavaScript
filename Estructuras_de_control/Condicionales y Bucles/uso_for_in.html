@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Usos for in</title>
+        <link rel="stylesheet" href="CSS/stylo.css">
+    </head>   
+    <body>
+       <h1>Usos for in</h1>
+       <br>
+       <p>Vamos a recorrer un objeto JavaScript usando 2 metodos.</p>
+       <br>
+		<h2>Usando un bucle <i>for of</i>:</h2>
+       <br>
+        <!--<script type="text/javascript">
+        	
+       		//Creamos un objeto llamado coche.
+			let coche={color:"azul", 
+					   peso:1200, 
+					   cilindrada:1100, 
+					   marca:"Skoda", 
+					   modelo:"Fabia"};
+			
+			//Declaramos una variable para el conjunto de las propiedades (claves más valores) es cada una de las propiedades del objeto con su valor.
+			let claveValor="";
+			
+			//Usamos el bucle for of para recorrerlo declarando "k" para las claves y "v" para sus valores.
+			for(let [k,v] of Object.entries(coche)){
+				
+				//Actualizamos la variable claveValor con nuevas propiedades.
+				//Escoger una de las opciones y comentar el resto.
+				//Propiedad más valor.
+				claveValor+=k+":"+v;
+				
+				//Solamente propiedad.
+				//claveValor+=k;
+				
+				//Solamente valor:
+				//claveValor+=v;
+				
+				//Añadimos a claveValor un salto de linea.
+				claveValor+="<br> ";				
+				
+			}
+			
+			//Escribimos en el documento web el resultado de claveValor.
+			document.write(`<p class="script">${claveValor}</p> <br>`);
+			
+        </script>-->
+        <br>
+		<h2>Usando un bucle <i>for in</i>:</h2>
+       <br>
+       <!--<script type="text/javascript">
+		   
+       		//Creamos un objeto llamado coche2.
+			let coche2={color:"blanco", peso:1200, cilindrada:1100, marca:"Skoda", modelo:"Fabia"};
+		   
+		   //Para recorrerlo usamos el bucle for in.
+		   for(let propiedad in coche2){
+			   
+			//De esta forma solo nos devuelve las propiedades del objeto pero no sus valores.   
+			//document.write(`<p class="script">${propiedad}</p> <br>`);
+			   
+			//De esta forma solo nos devuelve los valores del objeto pero no sus propiedades.   
+			//document.write(`<p class="script">${coche2[propiedad]}</p> <br>`);
+			   
+			//De esta manera nos devuelve las propiedades y sus valores.   
+			document.write(`<p class="script">${propiedad}:${coche2[propiedad]}</p> <br>`);			   
+			   
+		   }
+		   
+       </script>-->  
+    </body>
+</html>

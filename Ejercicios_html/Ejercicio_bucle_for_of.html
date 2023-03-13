@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Ejercicio bucle for of</title>
+    </head>
+    
+    <body style="background: #151515; font-size: 2em; color: #f5cae8; text-align: center; padding: 10px 20px;">
+       <h1 style="text-transform: capitalize; color: #00ff00;">Ejercicio Bucle for of</h1>
+       <h2 style="text-align: left">Intrucciones:</h2>
+		<p style="text-align: left">1. Crea un programa que pida mediante ventanas tipo <i style="color: #00ff00;">prompt</i> cinco números al usuario.</p>
+       <p style="text-align: left">2. Almacena los números introducidos en un <i style="color: #00ff00;">array</i> utilizando un bucle <i style="color: #00ff00;">for</i> normal.</p>
+       <p style="text-align: left">3. A continuación, usando un bucle <i style="color: #00ff00;">for...of</i> que recorra el <i style="color: #00ff00;">array</i>, y muestre un mensaje informando el reslitado en el navegador de mlitiplicar cada uno de los números por 5.</p>
+       <h2 style="text-align: left">Ejemplo:</h2>
+       <p style="text-align: left">Se pediran al usuario 5 números Por ejemplo: 2,4,10,11,8.</p>
+       <p style="text-align: left">A continuación, se mostrará el siguiente mensaje en el navegador:</p>      	
+       <p style="text-align: left"><i>El resultado de multiplicar por 5 los números es:</i></p>
+       <ol>
+       	<li>
+       		<p style="text-align: left;">2x5=10</p>
+       	</li>
+       	<li>
+       		<p style="text-align: left;">4x5=20</p>
+       	</li>
+       	<li>
+       		<p style="text-align: left;">10x5=50</p>
+       	</li>
+       	<li>
+       		<p style="text-align: left;">11x5=55</p>
+       	</li>
+       	<li>
+       		<p style="text-align: left;">8x5=40</p>
+       	</li>
+       </ol>       		
+        <h2 style="color: #00ff00; text-align: left">Resultado:</h2>
+        <script type="text/javascript" style="color: #00ff00;">
+        	// Crear un array vacío
+			var numeros = [];
+			
+			// Usar un bucle for para añadir los números al array
+			for (var i = 0; i < 5; i++) {
+				
+				var numero = parseInt(prompt("Introduce el número " + (i + 1) + " por favor.")); 
+				
+				numeros.push(numero);
+			}
+			document.write("<p style='color: #00ff00; text-align: left;'>El resultado de multiplicar por 5 los números es:</p><br>");
+			for(numero of numeros){
+   					document.write(`<p style="color: #00ff00;">${numero}x5=${numero*5}</p> <br>`);
+				}
+			
+			
+			
+			// Mostrar el array resultante
+			//document.write(`<p style="color: #00ff00;">${numeros}</p>`);
+        </script>
+    </body>
+</html>

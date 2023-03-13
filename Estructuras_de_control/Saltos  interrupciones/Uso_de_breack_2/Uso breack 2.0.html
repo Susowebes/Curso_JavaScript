@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso breack 2.0</title>
+    <link rel="stylesheet" href="../CSS/stylo.css">
+</head>
+<body>
+    <h1>Uso de breack 2.0</h1>
+    <br>
+    <script type="text/javascript">
+
+        //Creamos una array vacio llamado "naciones".
+        let naciones=[];
+
+        //creamos una variable llamada "num" para conocer las posiciones del array "naciones".
+        let num=0;
+
+        //Mediante un bucle do..while y una ventana tipo "prompt" pedimos al usuario que ingrese la datos.
+       do{
+            //Dentro del bucle incrementamos el valor de numen + 1 ; la pocsición 0 del array se ignora.
+            num+=1;
+            
+            //Pedimos al usuario los datos a introducir en este ejemplo nombres de naciones.
+            naciones[num]=prompt("Introduzca una nación por favor. \nPulse cancelar para salir.");
+            
+            //El bucle funcionará hasta que el valor de num sea desigual a "null" el valor de null se cumple al apretar el botón de cancelar en la ventana "prompt".   
+        }while(naciones[num] != null);
+        
+        
+
+        //Con un bucle for recorremos el array buscando la palabra asignada.
+        for(let i=0; i<naciones.length; i++){
+
+            //Mediante un condicional if...else creamos la condición necesaria para encontrar lo que buscamos.
+            if(naciones[i] == "españa" || naciones[i] == "ESPAÑA" || naciones[i] == "España" || naciones[i] == "spain" || naciones[i] == "SPAIN" || naciones[i] == "Spain"){
+
+                //texto que se imprime al encontrar lo que se busca.
+                document.write(i + " ¡ENCONTRADO! " + naciones[i] + "<br>");
+
+                //Una vez encontrado le ponemos un breack para economizar recursos.
+                break;
+
+                //Texto que se imprime hasta que no aparezca lo buscado.
+            }else{document.write(i + " ¡NO ENCONTRADO! " + naciones[i] + "<br>");}
+
+        }
+
+    </script>
+</body>
+</html>

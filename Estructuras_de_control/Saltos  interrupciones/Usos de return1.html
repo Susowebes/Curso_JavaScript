@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos de return 1</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Usos de return 1</h1>
+    <br>
+    <script type="text/javascript">
+        //Ejemplo 1.
+
+        document.write("Texto de ejemplo 1 <br>");
+        document.write("Texto de ejemplo 2 <br>");
+
+        //Creamos una función.
+        function frases(){
+
+            //Con "return" lanzamos su contenido.
+            return "Texto de ejemplo 5 <br>";
+            
+        }
+        
+        document.write("Texto de ejemplo 3 <br>");
+        document.write("Texto de ejemplo 4 <br>");
+        
+        /* Llamamos a la función dendro de un "document.write" para que recoja lo 
+        lanzado por "return" e imprima el contenido de la función. */
+        document.write(frases() + " Fin primer ejemplo.");
+        
+    </script>
+    <br>
+    <script type="text/javascript">
+        //Ejemplo 2.
+        
+        document.write("Texto de ejemplo 6 <br>");
+        document.write("Texto de ejemplo 7 <br>");
+        
+        //Llamamos a una función.
+        function frases2(){
+            
+            //Con "return" lanzamos su contenido.
+            return "Texto de ejemplo 10 <br>";
+            
+        }
+        
+        document.write("Texto de ejemplo 8 <br>");
+        document.write("Texto de ejemplo 9 <br>");
+        
+        /* Creamos una variable para almacenar y hacer lo que queramos 
+        con el contenido de la función. */
+        let resultadoFrase = frases2();
+        
+        //Utilizamos  la variable donde necesitemos.
+        document.write(resultadoFrase + "Fin del segundo ejemplo.");
+        
+    </script>
+    <br>
+    <script type="text/javascript">
+        //Ejemplo 3.
+        
+        document.write("Texto de ejemplo 11 <br>");
+        document.write("Texto de ejemplo 12 <br>");
+
+     /* Llamamos a una función; esta vez con su parametro; 
+        (Un parametro es una variable que funciona solo dentro de una función). */
+        function frases3(frase){
+
+            //Con "return" lanzamos el parametro.
+            return frase;
+
+        }
+
+        document.write("Texto de ejemplo 13 <br>");
+        document.write("Texto de ejemplo 14 <br>");
+
+         // Creamos una variable para almacenar el argumento o valor del parametro  de "frase". 
+        let resultadoFrase2 = frases2("Testo de ejemplo 15") + "Y...  <br>";
+
+        //Utilizamos  la variable donde necesitemos.
+        document.write(resultadoFrase + "Fin del tercer ejemplo.");
+
+    </script>
+</body>
+</html>

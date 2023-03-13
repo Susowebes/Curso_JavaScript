@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body style="font-size: 4em;">
+	<script type="text/javascript">
+		
+		//Ejemplo 1:
+		
+		let edades=[4,7,9,1,33,678];
+		
+		for(let i=0;i<edades.length;i++){
+			
+			document.write(edades[i]+ "<br>"); 
+			
+		}
+		
+		//Ejemplo 2:
+		
+		let miArray = new Array(25);
+		miArray.fill(Math.floor(Math.random() * 100) + 1);
+		
+		for(let i=0; i<miArray.length; i++){
+			
+			document.write(miArray[i] + "<br>"); 
+			
+		}
+		
+		// Ejemplo 3: Sumar +5 a cada elemento de un array
+		var lista_numeros = [1,2,3,45,34,56,2,4,6,3,45,567,34];
+			for (var i = 0; i < lista_numeros.length; i++) {
+  lista_numeros[i] = lista_numeros[i] + 5;
+			}
+			document.write(lista_numeros + "<br>");
+
+// Ejemplo 4: Escribir en pantalla los números del 1 al 10
+for (var i = 1; i <= 10; i++) {
+  document.write("El número es " + i + "<br>");
+}
+
+// Ejemplo 5: Escribir en pantalla los encabezados desde H1 hasta H6
+for (var i = 1; i <= 6; i++) {
+  document.write("<H" + i + ">Encabezado de nivel " + i + "</H" + i + ">");
+}
+		
+	</script>
+	<script type="text/javascript">
+	// Ejemplos bucle for out:
+		//Ejemplo 1:
+		
+		let numero=[4,7,9,1,33,678];
+		
+		
+		for(let i of numero){
+			
+			document.write(i+ "<br>"); 
+			
+		}	
+		//Ejemplo 2:	
+		let frutas = ["manzana", "naranja", "plátano"];
+		
+		for (let fruta of frutas) {
+			
+  			document.write(fruta + "<br>");
+			
+				}
+		
+	</script>
+	
+	
+</body>
+</html>

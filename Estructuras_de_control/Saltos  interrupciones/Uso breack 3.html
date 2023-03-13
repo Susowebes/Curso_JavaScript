@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Uso de Breack</h1>
+    <br>
+    <h2>Breack con uso de etiquetas</h2>
+    <br>
+    <script type="text/javascript">
+
+        let pais=[["Lisboa", "Oporto", "Braga"],["Madrid", "Ponferrada", "Barcelona"],["Roma", "Milan", "Turin"]];
+
+        //Etiqueta "buclePrincipal" acompañada siempre de ":".
+        buclePrincipal:for(let i=0;i<3;i++){
+
+            for(let j=0;j<3;j++){
+
+                
+                document.write(pais[i][j] + "<br>");
+
+                //Con este "if" recorres un "Array" buscando algo en concreto en este caso la palabra "Ponferrada".
+                if(pais[i][j]=="Ponferrada"){
+                    
+                    document.write("Lo has encontrado <br>");
+
+                    //Uso de la etiqueta con "breack".
+                    break buclePrincipal;
+                }
+
+            }
+
+           document.write("ciudades del pais " + i + "<br>"); 
+        }
+
+    </script> 
+</body>
+</html>

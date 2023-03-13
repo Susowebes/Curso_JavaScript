@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso continue 1.0</title>
+    <link rel="stylesheet" href="CSS/stylo.css" type="text/css">
+</head>
+<body style="text-align: left;">
+    <h1>Uso continue 1.0</h1>
+    <br>
+    <script type="text/javascript"> 
+
+        //Creamos una variable que controle el nº de trabajador.
+        let trabajador=0;
+        
+        //Creamos un Array vacio.
+        let salarios=[];
+     /* 
+        Creamos un bucle while para rellenar el array.
+        6 es el número de posiciones en el array pero 
+        pueden ser mucho más; incluso infinitas. 
+     */
+        while(trabajador<5){ 
+
+            
+            //Creamos una variable con lo que el usuario introduzca.
+            let salario=prompt(`Introduce salario del trabajador ${(trabajador+1)}.\nSi no lo conoces introduce 0.`);
+            
+            //Creamos un condicional if para aplicar una regla.
+            if(!salario)continue;
+         /* 
+            Al aplicar "continue" el programa se salta todas las instrucciones 
+            que hay debajo pero dentro del bucle y vuelve a iniciar el bucle.
+            En este caso se salta las lineas 40 y 43. 
+         */
+            //Rellenamos el array con el contenido de la variable más una deducción.
+            salarios[trabajador]=salario-(salario*0.25);     
+
+            //Incrementamos el nº de trabajador.
+            trabajador+=1;
+        }
+        
+        //Creamos un bucle for...of para leer lo acumulado en el array.
+        for(salario of salarios){
+            
+            document.write(salario+"<br>");
+        }   
+
+    </script>
+</body>
+</html>
