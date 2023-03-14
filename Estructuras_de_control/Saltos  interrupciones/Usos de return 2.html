@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos de return 2</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Usos de return 2</h1>
+    <br>
+    <p>Ejemplo 1</p>
+    <br>
+    <script type="text/javascript">
+
+        //Ejemplo 1
+
+     /* Vamos a crear una función para realizar una 
+        operación aritmetica.*/
+        function calculo(operador1,operador2){
+
+         /* Añadimos un condicional "if" para 
+            comprobar que se cumplen las condiciones. */
+            if(isNaN(operador1) || isNaN(operador2)){
+
+                //Si no se cumple se ejecuta esto.
+                return "Imposible calcular uno de los " +
+                "valores no es numerico.";
+
+                //Si se cumple se ejecuta esto.
+            }return operador1 + operador2;
+
+            //Al Encontrarse esta linea debajo del "return el programa la ignora."
+            document.write("Operación realizada. <br>");
+
+        }
+
+            document.write("El resultado es: " + calculo(5,9));
+
+    </script>
+    <br>
+    <br>
+    <p>Ejemplo 2</p>
+    <br>
+    <script type="text/javascript">
+        
+        //Ejemplo 2
+
+     /* Vamos a crear una función para realizar una 
+        operación aritmetica.*/
+        function calculo(operador1,operador2){
+
+            /* Al Encontrarse esta linea encima del "return" 
+               el programa no la ignora. */
+               document.write("Operación realizada. <br>");
+
+         /* Añadimos un condicional "if" para 
+            comprobar que se cumplen las condiciones. */
+            if(isNaN(operador1) || isNaN(operador2)){
+                
+                //Si no se cumple se ejecuta esto.
+                return "Imposible calcular uno de los " +
+                "valores no es numerico.";
+
+                //Si se cumple se ejecuta esto.
+            }return operador1 + operador2;
+
+        }
+
+            document.write("El resultado es: " + calculo(8,9));
+
+    </script>    
+</body>
+</html>
