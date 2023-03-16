@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,18 +29,52 @@
     <br>
     <div class="javascript-container">
         <script type="text/javascript">
-            // Creamos una función generador.
-          /*  function* numeroPrimo(desde,hasta){
+          // Función que devuelve un array con los números primos entre 2 números.
+            function calcularPrimos() {
 
-                for(let i=desde;i>=hasta;i++){
+                // Crear un array vacío para guardar los números primos.
+                let numerosPrimos = [];
 
+                //Creamos 2 variables para recoger los datos introducidos por el usuario.
+                let num1=parseInt(prompt("Introduce el primer número por favor."));
+                let num2=parseInt(prompt("Introduce el segundo número por favor."));
+                
+                // Recorrer los números desde num1 hasta num2.
+                for (let i = num1; i <= num2; i++) {
+
+                    // Asignamos un valor true para el número si es primo
+                    let esPrimo = true;
+
+                     /* Comprobamos si el número es divisible por algún otro 
+                       número entre 2 y la mitad del número. */
+                    for (let j=2; j<=i/2; j++) {
+
+                        // Si el número es divisible, no es primo
+                        if (i % j == 0) {
+                            // Si se cumple la condición el número no es primo.
+                            esPrimo = false;
+
+                            // Con break salimos del condicional.
+                            break;
+                        }
+                    }
+                     // Si el número es primo, agregarlo a la matriz de primos
+                        if (esPrimo) {
+                            numerosPrimos.push(i);
+                        }
                 }
-            } */
-
-            let numeroPrimo=[];
-            let num=0;
+                // Devolver el array de primos.
+                return primos;
+                
+            }
+            //Corremos el array para listarlo y escogemos los 3 primeros numeros.
+            for(let k=0; k<numerosPrimos.length; k++){
+                
+                document.write(numerosPrimos[0,3]);
+            }
             
         </script>
     </div>
+    <input type="button" value="click aqui" onclick="calcularPrimos()">
 </body>
 </html>
