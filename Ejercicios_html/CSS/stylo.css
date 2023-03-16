@@ -15,11 +15,12 @@ body {
 	background-color: var(--negro);
 	text-align: center;
 	color: var(--rosa);
+	padding: 20px;
 }
 
 h1 {
 	color: var(--blanco);
-	font-size: 2em;
+	font-size: 32px;
 	text-transform: uppercase;
 }
 
@@ -33,7 +34,7 @@ h2 {
 p {
 	color: var(--rosa);
 	text-align: left;
-	font-size: 2em;
+	font-size: 20px;
 }
 
 i {
