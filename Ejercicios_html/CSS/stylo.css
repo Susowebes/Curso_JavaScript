@@ -25,14 +25,14 @@ h1 {
 }
 
 h2 {
-	color: var(--blanco);
+	color: var(--rosa);
 	text-align: left;
 	text-transform: capitalize;
 	font-size: 2em;
 }
 
 p {
-	color: var(--rosa);
+	color: var(--verde);
 	text-align: left;
 	font-size: 20px;
 }
