@@ -29,52 +29,43 @@
     <br>
     <div class="javascript-container">
         <script type="text/javascript">
-            // Función que devuelve un array con los números primos entre 2 números.
-            function calcularPrimos(){
 
                 // Array vacío para guardar los números primos.
                 let numerosPrimos=[];
-                let contador=0;
 
                 // 2 variables para recoger los datos introducidos por el usuario.
                 let num1=prompt("introduce el primer número por favor");
                 let num2=prompt("introduce el segundo número por favor");
-
+                
                 // Bucle "for"para recorrer los números desde num1 hasta num2.
                 for(let i=parseInt(num1);i<parseInt(num2);i++){
-
+                    
                     // Variable con un valor "true" para el número si es primo.
                     let esPrimo = true;
-
+                    
                     /* Compruebo si el número es divisible por algún otro 
-                    número entre 2 y la mitad del número. */
-                    for (let j=2; j<=i/2; j++) {
-
+                    número entre 2.*/
+                    for(let j=2; j<i; j++){
+                        
                         // Si el número es divisible, no es primo.
-                        if (i % j == 0) {
-
+                        if(i%j==0){
+                            
                             esPrimo = false;
                             // Con break salgo del condicional.
                             break;
                         }
-                            // Si el número es primo, lo agrego al array.
-                        if (esPrimo) {
-                            contador++;
+                        // Si el número es primo, lo agrego al array.
+                        if(esPrimo){
                             numerosPrimos.push(i);
+                            break;
                         }
+                        
                     }
                 }
                 //imprimo las 3 primeras posiciones.
-                document.write(numerosPrimos.slice(0,3));                
-                              
-            }
-            
+                 document.write(numerosPrimos.slice(0,3));                                
+                
         </script>
     </div>
-    <div class="parrafo-container">
-        <p>Haz 'Click' en el botón para iniciar la aplicación.</p>
-    </div>
-    <br>
-    <input type="button" value="click Aquí" onclick="calcularPrimos()">
 </body>
 </html>
