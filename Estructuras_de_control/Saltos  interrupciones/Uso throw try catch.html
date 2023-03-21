@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <met7a http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso throw try catch 2</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>uso throw try catch 2</h1>
+    <br>
+    <script type="text/javascript">
+        
+        // Creamos la función que va a recibir un valor númerico "x"
+        function factorial(x){
+            
+            /* Mediante un condicional "if" la instrucción "throw" 
+               pedimos al programa que nos lanze un mensaje de error 
+               que capturaremos con "try-catch ". */
+             try{
+                
+                if(x < 0) throw new Error("¡Número negativo! <br>");
+
+             }
+             catch(e){
+
+                document.write(e);
+             }
+
+
+             //Declaramos una variable llamada "factorial" sin iniciarla.
+             let factorial; // Planteamiento curso.
+             //let factorial=1;//Mi planteamiento.
+
+             //Creamos un bucle "for" encargado de hacer el cáculo.
+             // Mi planteamiento for(let i=factorial; i>=0; i--){
+            for(factorial=1;x>1;x--){
+                    
+                // Factorial se irá multipicando y acumulando por el valor de x.
+                    factorial*=x;
+                // Es lo mismo.
+                // factorial=factorial*x;
+
+            }
+            // Con return pedimos que devuelva el valor de "factorial".
+            return factorial;
+        }
+        /* Fuera de la función declaramos una variable y pedimos al usuario 
+           mediante "prompt" que la inicie escribiendo un número. */
+           let numero = parseInt( prompt("Escribe un numero"));
+
+            /* Imprimimos en el documento el resultado final con una 
+              llamada a la función "factorial(numero)" con su parametro 
+              que es la variable que guarda el número introducido 
+              por el usuario. */
+             document.write("El factorial de " + numero + " es: " + factorial(numero));
+    </script>
+</body>
+</html>

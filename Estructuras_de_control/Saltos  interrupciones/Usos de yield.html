@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos de yield</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Usos de Yield</h1>
+    <br>
+    <script type="text/javascript">
+        // Con "Yield" vamos a usar una función generador.
+        function* rango(desde,hasta){
+
+            //Creamos un bucle "for".
+            for(let i=desde;i<=hasta;i++){
+
+                //Con "Yield" hacemos un salto en el código.
+                yield i;
+            }
+        }
+     /* Creamos una variable para llamar a la función generador
+        y le pasamos los parametros y nos devuelve los valores 
+        poco a poco */  
+        let numero=rango(5,15);
+
+     /* Para consegirlo usamos la funcion ".next()" y
+        el atributo ".value" las veces que lo necesitemos. */
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        document.write("El número es: " + numero.next().value + "<br>");
+        
+
+    </script>              
+</body>
+</html>

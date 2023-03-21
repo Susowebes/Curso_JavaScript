@@ -15,25 +15,26 @@ body {
 	background-color: var(--negro);
 	text-align: center;
 	color: var(--rosa);
+	padding: 20px;
 }
 
 h1 {
 	color: var(--blanco);
-	font-size: 2em;
+	font-size: 32px;
 	text-transform: uppercase;
 }
 
 h2 {
-	color: var(--blanco);
+	color: var(--rosa);
 	text-align: left;
 	text-transform: capitalize;
 	font-size: 2em;
 }
 
 p {
-	color: var(--rosa);
+	color: var(--verde);
 	text-align: left;
-	font-size: 2em;
+	font-size: 20px;
 }
 
 i {

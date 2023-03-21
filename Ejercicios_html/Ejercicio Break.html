@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio break</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <div class="h1-container">
+        <h1>Ejercicio Break</h1>
+    </div>
+    <br>
+    <div class="h2-container">
+        <h2>Enunciado</h2>
+    </div>
+    <br>
+    <div class="parrafo-container">
+        <p>Crear un programa que pida mediante ventanas tipo 'prompt' 2 numeros.</p>
+        <p>El programa debe mostrar los 3 primeros números primos comprendidos.</p> 
+        <p>Por ejemplo: Entre 5 y 20, serian "5, 7, 11".</p>
+        <p>Incluir en el programa la instrucción "<b>break</b>".</p>
+    </div>
+    <br>
+    <div class="h2-container">
+        <h2>Ejecución</h2>
+    </div>
+    <br>
+    <div class="javascript-container">
+        <script type="text/javascript">
+
+                // Array vacío para guardar los números primos.
+                let numerosPrimos=[];
+
+                // 2 variables para recoger los datos introducidos por el usuario.
+                let num1=prompt("introduce el primer número por favor");
+                let num2=prompt("introduce el segundo número por favor");
+                
+                // Bucle "for"para recorrer los números desde num1 hasta num2.
+                for(let i=parseInt(num1);i<parseInt(num2);i++){
+                    
+                    // Variable con un valor "true" para el número si es primo.
+                    let esPrimo = true;
+                    
+                    /* Compruebo si el número es divisible por algún otro 
+                    número entre 2.*/
+                    for(let j=2; j<i; j++){
+                        
+                        // Si el número es divisible, no es primo.
+                        if(i%j==0 ||i==9){
+                            
+                            esPrimo = false;
+                            // Con break salgo del condicional.
+                            break;
+                        }
+                        // Si el número es primo, lo agrego al array.
+                        if(esPrimo){
+                            numerosPrimos.push(i);
+                            break;
+                        }
+                        
+                    }
+                }
+                //imprimo las 3 primeras posiciones.
+                 document.write(numerosPrimos.slice(0,3));                                
+                
+        </script>
+    </div>
+</body>
+</html>
