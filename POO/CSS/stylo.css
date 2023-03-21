@@ -15,6 +15,7 @@ body {
 	background-color: var(--negro);
 	text-align: center;
 	color: var(--rosa);
+	padding: 20px;
 }
 
 h1 {
