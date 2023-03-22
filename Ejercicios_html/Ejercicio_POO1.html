@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio POO 1</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+</head>
+<body>
+    <h1>Ejercicio POO 1</h1>
+    <br>
+    <P>
+        Con los conocimientos adquiridos hasta ahora. Correr un objeto en busca 
+        de sus propiedades buscando la propiedad "Modelo:Fabia" ; y si no la encuentra crearla.
+    </P>
+    <br>
+    <code style="color: #ffffff;">
+        let coche={Marca:"Skoda",Color:"azul",Plazas:5};
+    </code>
+    <br>
+
+
+    
+    <script type="text/javascript">
+        
+        let coche={Marca:"Skoda",Color:"azul",Plazas:5};
+        
+        for(let p in coche){
+            if(p!="Modelo")coche.Modelo="Fabia";
+            
+            document.write(p + "<br>");
+        }
+        
+        console.log(coche.hasOwnProperty("Modelo"));
+        console.log(coche);
+
+    </script>
+
+
+    </body>
+        </html>
