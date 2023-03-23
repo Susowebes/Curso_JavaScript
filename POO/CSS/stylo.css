@@ -32,15 +32,32 @@ h2 {
 }
 
 p {
-	color: var(--rosa);
+	color: var(--blanco);
 	text-align: left;
-	font-size: 2em;
+	font-size: 20px;
 }
 
 i {
 	color: var(--verde);
 }
 
-.script {
+.boton {
+	height: 40px;
+	width: 88px;
+	background-color: var(--rosa);
+	color: var(--negro);
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	border-color: var(--verde);
+}
+
+.code-container {
+	text-align: left;
+	font-size: 18px;
+}
+
+#codigo {
+	font-size: 20px;
 	color: var(--verde);
 }
