@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva sintaxis ES6</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/js.png">
+</head>
+<body>
+    <div class="h1-cont">
+        <h1>Nueva sintaxis ES6</h1>
+    </div>
+     <!--<div class="code-container">
+         <code>
+        </code>
+    </div>-->
+    <div class="h2-cont">        
+        <h2 id="titulo"></h2>
+    </div>
+    <div class="p-cont">
+       <p>Sirve unir las propiedades de dos o más objetos en uno diferente.</p>
+    </div>    
+    <div class="p-cont">
+        <p id="codigo"></p>
+    </div>
+    <div class="boton-cont">
+        <input type="button" value="Click aquí" class="boton" onclick="mixer()">
+    </div>
+    <div class="h2-cont">        
+        <h2 id="titulo2"></h2>
+    </div>
+    <div class="code-container">
+         <code>
+                let triangulo={ <br>
+                base: parseInt(prompt("Define la base del triangulo.")),<br>
+                altura: parseInt(prompt("Define la altura del triangulo")),<br>
+        
+                area:function(){return(this.altura*this.base)/2;}<br>
+                // Esto se puede abreviar con la nueva sintaxis.<br>
+                area(){return(this.altura*this.base)/2;}<br>
+                }
+        </code>
+    </div>   
+    <div class="p-cont">
+        <p id="codigo2"></p>
+    </div>
+    <div class="boton-cont">
+        <input type="button" value="Click aquí" class="boton" onclick="calculoArea()">
+    </div>
+    <div class="h2-cont">        
+        <h2 id="titulo3"></h2>
+    </div>
+    <div class="p-cont">
+       <p>Propiedades de acceso</p>
+    </div> 
+    <div class="code-container">
+        <code>let triangulo={ <br></code>
+        <code>base: 12,<br></code>
+        <code>altura: 15,<br></code>
+        <code>// Con get declaras <br></code>
+        <code>get area(){ // Propiedad de lectura<br></code>
+        <code>return(this.altura*this.base)/2<br></code>
+        <code>},<br></code>
+        <code>// Con set modificas<br></code>
+        <code>set area(nuevaBase){ // Propiedad de escritura<br></code>
+        <code>this.base=nuevaBase;<br></code>
+        <code>},<br></code>
+        <code> }<br></code>
+        <code>// Nuevo valor usado con set<br></code>
+        <code>triangulo.area=100;</code>              
+   </div>      
+    <div class="p-cont">
+        <p id="codigo3"></p>
+    </div>
+    <div class="boton-cont">
+        <input type="button" value="Click aquí" class="boton" onclick="calculoArea2()">
+    </div>
+    <div class="h2-cont">        
+        <h2 id="titulo4"></h2>
+    </div>
+    <div class="p-cont">
+       <p>Un nuevo ejemplo de "get" y "set".</p>
+    </div>
+    <div class="code-cont">
+        <code>let persona={</code><br>
+        <code>nombre: "Jesús",</code><br>
+        <code>apellido: "Garcia",</code><br>
+        <code>get dameNombre(){</code><br>
+        <code>return `${this.nombre} ${this.apellido}`;</code><br>
+        <code>},</code><br>
+        <code>set dameNombre(newName){</code><br>
+        <code>[this.nombre, this.apellido]=newName.split(" ");</code><br>
+        <code>}</code><br>
+        <code>}</code><br>
+        <code>persona.dameNombre="Jimena Garcia";</code>
+    </div>    
+    <div class="p-cont">
+        <p id="codigo4"></p>
+    </div>
+    <div class="boton-cont">
+        <input type="button" value="Click aquí" class="boton" onclick="cambioNombre()">
+    </div>
+    <script src="JS/newSintaxis.js"></script>
+</body>
+</html>
