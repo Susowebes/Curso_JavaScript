@@ -13,34 +13,72 @@
 
 body {
 	background-color: var(--negro);
-	text-align: center;
-	color: var(--rosa);
+	color: var(--blanco);
 	padding: 20px;
 }
 
+div {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.h1-cont {
+	border: 1px solid var(--blanco);
+}
+
 h1 {
+	text-align: center;
 	color: var(--blanco);
-	font-size: 2em;
+	font-size: 32px;
 	text-transform: uppercase;
 }
 
+.h2-cont {
+	background-color: var(--blanco);
+	padding: 15px;
+}
+
 h2 {
-	color: var(--blanco);
-	text-align: left;
+	color: var(--negro);
 	text-transform: capitalize;
-	font-size: 2em;
+	font-size: 24px;
+}
+
+.p-cont {
+	padding: 18px;
 }
 
 p {
-	color: var(--rosa);
-	text-align: left;
-	font-size: 2em;
+	color: var(--blanco);
+	font-size: 20px;
 }
 
 i {
 	color: var(--verde);
 }
 
-.script {
+.boton {
+	height: 40px;
+	width: 88px;
+	background-color: var(--rosa);
+	color: var(--negro);
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	border-color: var(--verde);
+}
+
+code {
+	font-size: 18px;
+	color: var(--blanco);
+	padding: 18px;
+}
+
+#codigo, #codigo3 {
+	font-size: 20px;
 	color: var(--verde);
+}
+
+#codigo2, #codigo4 {
+	font-size: 20px;
+	color: var(--rosa);
 }

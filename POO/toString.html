@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodo toString</title>
+    <link rel="stylesheet" href="CSS/stylo.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/js.png">
+</head>
+<body>
+    <h1>Metodo .toString()</h1>
+    <br>
+    <p>
+        El metodo toString() sirve para mostrar 
+        la información de un objeto en formato de texto.
+    </p>
+    <br>
+    <div class="code-container">
+        <code>
+            // Objeto llamado coche. <br>
+            let coche={color:"rojo",potencia:400,propietario:p1,toString:function(){ <br>
+                <br>
+                return "El coche es de color: "+`${coche.color}`+" y tiene: "+`${this.potencia}`+" CVs";<br>
+                <br>
+                }};
+        </code>
+    </div>
+    <br>
+    <input type="button" value="Click aquí" class="boton" onclick="cambioTexto()">
+    <br>
+    <p id="codigo"></p>
+    <br>
+    <script src="JS/toString.js"></script>
+</body>
+</html>
