@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos Arrays 1</title>
+    <link rel="stylesheet" href="../CSS/stylo.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/js.png">
+</head>
+<body>
+    <div class="section-cont">
+        <div class="h1-cont">
+            <h1>Usos Arrays 1</h1>
+        </div>
+        <div class="p-cont">
+            <p>Vamos a conocer las maneras de crear Arrays y como poder acceder a su contenido</p>
+            <p></p>
+        </div>
+    </div>
+    <div class="section-cont1">
+        <div class="h2-cont">
+            <h2 id="titulo">Arrays literales</h2>
+        </div>
+        <div class="boton-cont">
+            <input type="button" value="Click aquí" class="boton" onclick="creArray()">
+        </div>
+        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+            <h3>Array valor númerico</h3>
+            <div class="code-cont">
+                <code>
+                    let numeros = [7,9,12,55,15];
+                </code>
+                <br>
+                <code id="code"></code>
+            </div>
+            <p id="codigo"></p>
+            <br>
+            <h3>Array con elementos de diferente tipo fijos</h3>
+            <div class="code-cont">
+                <code>
+                    let datos = [1.5, true, "Jesús", {alto:100, ancho:300}];<br>
+                </code>
+                <br>
+                <code id="code2">
+                    //  Vamos a añadir un dato más a este Array <br>
+                        datos[4]="Garcia";<br>
+                        datos[5]="Seijas";<br>
+                    // Usando un bucle for.<br>
+                         for(let i = 0; i < datos.lenght; i++){<br>
+                                    console.log(datos[i]);<br>
+                         }
+                </code>
+            </div>
+            <p id="codigo2"></p>
+            <br>
+            <h3>Array con valores que cambian en tiempo de ejecución</h3>
+            <div class="code-cont">
+                <code>
+                    // Primero creamos una variable <br>
+                        let valor = 500;<br>
+                        // Despues creamos el Array variable<br>
+                        let mas_numeros =[valor, valor+100, valor+200];
+                </code>
+                <br>
+                <code id="code3">
+                    //Usando un bucle for vamos a conocer los distintos valores de los datos<br>
+                    for(let j = 0; j < mas_numeros.length; j++){<br>
+                        console.log(mas_numeros[1]);<br>
+                    }<br>
+                    // vamos a mostrar el valor de la posición 2<br>
+                    document.getElementById("codigo3").innerHTML=mas_numeros[2];
+                </code>
+            </div>
+            <p id="codigo3"></p>
+            <br>
+            <h3>Array que contiene otros arrays 1</h3>
+            <div class="code-cont">
+                <code>
+                    let conjuntoArrays = [numeros, datos, mas_numeros];
+                </code>
+                <br>
+                <code id="code4"></code>
+            </div>
+            <p id="codigo4"></p>
+            <br>
+            <h3>Array que contiene otros arrays 2</h3>
+            <div class="code-cont">
+                <code>
+                    let mas_datos = [[7, {color:"rojo", potencia:500}], [15, {nombre:"Jesús", apellido:"Garcia"}]];
+                </code>
+                <br>
+                <code id="code5"></code>
+            </div>
+            <p id="codigo5"></p>
+        </div>
+    </div>
+    <div class="section-cont2">
+        <div class="h2-cont">
+            <h2 id="titulo2">Con operador spread</h2>
+        </div>
+        <div class="boton-cont">
+            <input type="button" value="Click aquí" class="boton" onclick="">
+        </div>
+        <div class="p-cont" id="p-cont2" style="visibility: hidden;">
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code6"></code>
+            </div>
+            <p id="codigo6"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code7">
+
+                </code>
+            </div>
+            <p id="codigo7"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code8"></code>
+            </div>
+            <p id="codigo8"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code9"></code>
+            </div>
+            <p id="codigo9"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+
+                </code>
+                <br>
+                <code id="code10"></code>
+            </div>
+            <p id="codigo10"></p>
+        </div>
+    </div>
+    <div class="section-cont3">
+        <div class="h2-cont">
+            <h2 id="titulo3">Con constructor Array()</h2>
+        </div>
+        <div class="boton-cont">
+            <input type="button" value="Click aquí" class="boton" onclick="">
+        </div>
+        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code11"></code>
+            </div>
+            <p id="codigo11"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code12">
+
+                </code>
+            </div>
+            <p id="codigo12"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code13"></code>
+            </div>
+            <p id="codigo13"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code14"></code>
+            </div>
+            <p id="codigo14"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code15"></code>
+            </div>
+            <p id="codigo15"></p>
+        </div>
+    </div>
+    <div class="section-cont4">
+        <div class="h2-cont">
+            <h2 id="titulo4">Con métodos of() y from()</h2>
+        </div>
+        <div class="boton-cont">
+            <input type="button" value="Click aquí" class="boton" onclick="">
+        </div>
+        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code16"></code>
+            </div>
+            <p id="codigo16"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                  
+                </code>
+                <br>
+                <code id="code17">
+
+                </code>
+            </div>
+            <p id="codigo17"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+                    
+                </code>
+                <br>
+                <code id="code18"></code>
+            </div>
+            <p id="codigo18"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+
+                </code>
+                <br>
+                <code id="code19"></code>
+            </div>
+            <p id="codigo19"></p>
+            <br>
+            <h3></h3>
+            <div class="code-cont">
+                <code>
+
+                </code>
+                <br>
+                <code id="code20"></code>
+            </div>
+            <p id="codigo20"></p>
+        </div>
+    </div>
+    <script src="JS/creaArrays.js"></script>
+</body>
+</html>
