@@ -9,7 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/js.png">
 </head>
 <body>
-    <div class="section-cont">
+    <div class="section-cont" >
+        <a name="arriba"></a>
         <div class="h1-cont">
             <h1>Usos Arrays 1</h1>
         </div>
@@ -18,14 +19,14 @@
             <p></p>
         </div>
     </div>
-    <div class="section-cont1">
+    <div class="section-cont1" style="z-index: 1;">
         <div class="h2-cont">
             <h2 id="titulo">Arrays literales</h2>
         </div>
         <div class="boton-cont">
             <input type="button" value="Click aquí" class="boton" onclick="creArray()">
         </div>
-        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+        <div class="p-cont" id="p-cont1" style="visibility: hidden; z-index: 9; position: absolute;">
             <h3>Array valor númerico</h3>
             <div class="code-cont">
                 <code>
@@ -44,12 +45,12 @@
                 <br>
                 <code id="code2">
                     //  Vamos a añadir un dato más a este Array <br>
-                        datos[4]="Garcia";<br>
-                        datos[5]="Seijas";<br>
+                    datos[4]="Garcia";<br>
+                    datos[5]="Seijas";<br>
                     // Usando un bucle for.<br>
-                         for(let i = 0; i < datos.lenght; i++){<br>
-                                    console.log(datos[i]);<br>
-                         }
+                    for(let i = 0; i < datos.lenght; i++){<br>
+                        console.log(datos[i]);<br>
+                    }
                 </code>
             </div>
             <p id="codigo2"></p>
@@ -58,9 +59,9 @@
             <div class="code-cont">
                 <code>
                     // Primero creamos una variable <br>
-                        let valor = 500;<br>
-                        // Despues creamos el Array variable<br>
-                        let mas_numeros =[valor, valor+100, valor+200];
+                    let valor = 500;<br>
+                    // Despues creamos el Array variable<br>
+                    let mas_numeros =[valor, valor+100, valor+200];
                 </code>
                 <br>
                 <code id="code3">
@@ -93,6 +94,9 @@
                 <code id="code5"></code>
             </div>
             <p id="codigo5"></p>
+            <div class="boton-cont">
+                <input type="button" value="Ocultar" class="boton" onclick="ocultar()">
+            </div>
         </div>
     </div>
     <div class="section-cont2">
@@ -100,60 +104,122 @@
             <h2 id="titulo2">Con operador spread</h2>
         </div>
         <div class="boton-cont">
-            <input type="button" value="Click aquí" class="boton" onclick="">
+            <input type="button" value="Click aquí" class="boton" onclick="creArray2()">
         </div>
-        <div class="p-cont" id="p-cont2" style="visibility: hidden;">
-            <h3></h3>
+        <div class="p-cont" id="p-cont2" style="visibility: hidden; z-index: 9; position: absolute;">
+            <h3>Insertar los elentos de un array dentro de otro.</h3>
             <div class="code-cont">
                 <code>
-                    
+                    // Tenemos los 2 arrays.<br>
+                    let numeros = [7,9,12,55,15];<br>
+                    let datos = [1.5, true, "Jesús", {alto:100, ancho:300}];<br>
+                    <br>
+                    // Vamos a meter econtenido de "numeros" dentro de "datos".<br>
+                    // 1º Eliminamos el elemento "true" del array "datos". <br>
+                    let datos = [1.5, , "Jesús", {alto:100, ancho:300}];<br>
+                    <br>
+                    // 2º añadimos el operador "spread" en la posicion donde antes estaba "true".<br>
+                    let datos = [1.5, ..., "Jesús", {alto:100, ancho:300}];<br>
+                    <br>
+                    // 3º Despues de los ... de "spread" añadimos el nombre del array que deseamos
+                    añadir en este caso "numeros".<br>
+                    let datos = [1.5, ...numeros, "Jesús", {alto:100, ancho:300}];<br>
+                    <br>
+                    // Usando un bucle for recorremos el array.<br>
+                    for(let i=0;i< datos.length;i++){<br>
+                        console.log(datos[i]);<br>
+                    }<br>
+                    // 4º El resultado nos tiene que aparecer los elementos de "numeros" dentro de "datos".<br>
                 </code>
                 <br>
-                <code id="code6"></code>
+                <!-- <code id="code6"></code> -->
             </div>
             <p id="codigo6"></p>
             <br>
-            <h3></h3>
+            <h3>Vamos a copiar Arrays</h3>
             <div class="code-cont">
                 <code>
-                    
+                    // Vamos a copiar Arrays.<br>
+                    <br>
+                    // Tenemos un array<br>
+                    let numeros2 = [7,9,12,55,15];<br>
+                    <br>
+                    // Con "spread" vamos a realizar una copia.<br>
+                    // Primero poniendo el operador y despues el nombre del array a copiar.<br>
+                    let copia_numeros = [...numeros2];<br>
+                    <br>
+                    // Para comprobar que son independientes vamos a modificar ambos arrays.<br>
+                    numeros2[0]=21;<br>
+                    copia_numeros[0]=99;<br>
+                    <br>
+                    // Vamos a recorrer los arrays con 2 bucles for.<br>
+                    <br>
+                    for(let k=0; k< numeros2.length; k++){<br>
+                        console.log(numeros2[k]);<br>
+                    }<br>
+                    <br>
+                    console.log("-------------------------");<br>
+                    <br>
+                    for(let l=0; l< copia_numeros.length; l++){<br>
+                        console.log(copia_numeros[l]);<br>
+                    }<br>
                 </code>
+                <!--<script text="text/javascript">
+                    // Tenemos un array
+                    let numeros2 = [7,9,12,55,15];
+                    
+                    // Con "spread" vamos a realizar una copia
+                    // Primero poniendo el operador y despues el nombre del array a copiar
+                    let copia_numeros = [...numeros2];
+                    
+                    // Para comprobar que son independientes vamos a modificar ambos arrays
+                    numeros2[0]=21;
+                    copia_numeros[0]=99;
+                    // Vamos a recorrer los arrays con 2 bucles for.
+                    for(let k=0; k<numeros2.length; k++){
+                        document.write(numeros2[k]+"<br>");
+                    }
+                    
+                    document.write("-------------------------"+"<br>");
+                    
+                    for(let l=0; l<copia_numeros.length; l++){
+                        document.write(copia_numeros[l]+"<br>");
+                    }
+                </script>-->
                 <br>
                 <code id="code7">
-
+                    
                 </code>
             </div>
             <p id="codigo7"></p>
             <br>
-            <h3></h3>
+            <h3>
+                Desmenuzar elementos de texto dentro de un array 
+                para comprobar contraseñas usuarios etc..
+            </h3>
             <div class="code-cont">
                 <code>
-                    
+                    // Array con una sola posición. <br>
+                    let nombre = ["Jesús Luis Garcia Seijas"];<br>
+                    console.log(nombre);<br>
+                    <br>
+                    // Con spread convertimos cada caracter del "string" en una posición dentro del array.<br>
+                    let nombre2 = [..."Jesús Luis Garcia Seijas"];<br>
+                    console.log(nombre2);<br>
+                    <br>
                 </code>
                 <br>
                 <code id="code8"></code>
             </div>
             <p id="codigo8"></p>
             <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-                    
-                </code>
-                <br>
-                <code id="code9"></code>
-            </div>
             <p id="codigo9"></p>
             <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-
-                </code>
-                <br>
-                <code id="code10"></code>
-            </div>
             <p id="codigo10"></p>
+            <br>
+            <div class="boton-cont">
+                <input type="button" value="Ocultar" class="boton" onclick="ocultar()">
+            </div>
         </div>
     </div>
     <div class="section-cont3">
@@ -163,7 +229,7 @@
         <div class="boton-cont">
             <input type="button" value="Click aquí" class="boton" onclick="">
         </div>
-        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+        <div class="p-cont" id="p-cont1" style="visibility: hidden; -index: 9; position: absolute;">
             <h3></h3>
             <div class="code-cont">
                 <code>
@@ -224,7 +290,7 @@
         <div class="boton-cont">
             <input type="button" value="Click aquí" class="boton" onclick="">
         </div>
-        <div class="p-cont" id="p-cont1" style="visibility: hidden;">
+        <div class="p-cont" id="p-cont1" style="visibility: hidden; -index: 9; position: absolute;">
             <h3></h3>
             <div class="code-cont">
                 <code>
