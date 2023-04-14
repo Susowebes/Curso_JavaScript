@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/stylo.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/js.png">
 </head>
-<body>
+<body id="bodi">
     <div class="section-cont" >
         <a name="arriba"></a>
         <div class="h1-cont">
@@ -187,9 +187,6 @@
                     }
                 </script>-->
                 <br>
-                <code id="code7">
-                    
-                </code>
             </div>
             <p id="codigo7"></p>
             <br>
@@ -227,60 +224,42 @@
             <h2 id="titulo3">Con constructor Array()</h2>
         </div>
         <div class="boton-cont">
-            <input type="button" value="Click aquí" class="boton" onclick="">
+            <input type="button" value="Click aquí" class="boton" onclick="creArray3()">
         </div>
-        <div class="p-cont" id="p-cont1" style="visibility: hidden; -index: 9; position: absolute;">
-            <h3></h3>
+        <div class="p-cont" id="p-cont3" style="visibility: hidden; -index: 9; position: absolute;">
+            <h3>Un array vacio</h3>
             <div class="code-cont">
                 <code>
-                    
+                    let numeros3 = new Array(); // lo mismo que []<br>
+                    console.log(numeros3);
                 </code>
                 <br>
-                <code id="code11"></code>
             </div>
             <p id="codigo11"></p>
             <br>
-            <h3></h3>
+            <h3>Indicando la cantidad de elementos</h3>
             <div class="code-cont">
                 <code>
-                    
+                    let nombres = new Array(5); // Especifica la cantidad de elementos que contiene<br>
+                    console.log(nombres);
                 </code>
                 <br>
-                <code id="code12">
-
-                </code>
             </div>
             <p id="codigo12"></p>
             <br>
-            <h3></h3>
+            <h3>Insertando elementos</h3>
             <div class="code-cont">
                 <code>
-                    
+                    let paises = new Array("España","Mexico","Colombia");<br>
+                    console.log(paises);
                 </code>
                 <br>
-                <code id="code13"></code>
             </div>
             <p id="codigo13"></p>
             <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-                    
-                </code>
-                <br>
-                <code id="code14"></code>
+            <div class="boton-cont">
+                <input type="button" value="Click aquí" class="boton" onclick="ocultar()">
             </div>
-            <p id="codigo14"></p>
-            <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-                    
-                </code>
-                <br>
-                <code id="code15"></code>
-            </div>
-            <p id="codigo15"></p>
         </div>
     </div>
     <div class="section-cont4">
@@ -288,61 +267,80 @@
             <h2 id="titulo4">Con métodos of() y from()</h2>
         </div>
         <div class="boton-cont">
-            <input type="button" value="Click aquí" class="boton" onclick="">
+            <input type="button" value="Click aquí" class="boton" onclick="creArray4()">
         </div>
-        <div class="p-cont" id="p-cont1" style="visibility: hidden; -index: 9; position: absolute;">
-            <h3></h3>
+        <div class="p-cont" id="p-cont4" style="visibility: hidden; -index: 9; position: absolute;">
+            <h3>Metodo of()</h3>
             <div class="code-cont">
                 <code>
-                    
+                    // Queremos  crear un nuevo array de una posición y con un valor de 15.<br>
+                    let mi_numero = new Array(15);<br>
+                    console.log(mi_numero);<br>
+                    // Esto es incorrecto ya que le estamos dando 15 posiciones.<br>
+                    <br>
+                    // Para corregirlo usamos el metodo .of()<br>
+                    // creamos un nuevo array<br>
+                    let miNumero = Array.of(15);<br>
+                    console.log(miNumero); <br>
                 </code>
                 <br>
-                <code id="code16"></code>
             </div>
             <p id="codigo16"></p>
             <br>
-            <h3></h3>
+            <h3>Metodo from()</h3>
             <div class="code-cont">
                 <code>
-                  
+                    // Vamos a crear un Array a partir de otro Array que ya teniamos<br>
+                    let nuevo_Array = Array.from(miNumero);<br>
+                    console.log(nuevo_Array);<br>
+                    <br>
+                    // Ahora vamos acrearlo a partir de un "String"<br>
+                    let persona = "Jesús Luis García Seijas";<br>
+                    <br>
+                    // El array creado contendrá tantas posiciones como posiciones tenga el "string"<br>
+                    let nuevoArray = Array.from(persona);<br>
+                    console.log(nuevoArray);<br>
+                    <br>
+                    /*<br>
+                        Voy a ordenar los elementos del array modificando<br>
+                        primero a otro array ya creado <br>
+                    */<br>
+                    nuevo_Array = Array.from(nuevoArray);<br>
+                    nuevo_Array = nuevo_Array.sort();<br>
+                    console.log(nuevo_Array);<br>
                 </code>
                 <br>
-                <code id="code17">
-
-                </code>
             </div>
-            <p id="codigo17"></p>
             <br>
-            <h3></h3>
+            <h3>Usamos una funcion tambien</h3>
             <div class="code-cont">
                 <code>
-                    
+                    /* <br>
+                    Vamos a crear un Array a partir de otro array <br>
+                    cuyos datos vamos a modificar con una función<br>
+                */<br>
+               // Creamos la función<br>
+               function sumaNumeros(valor){<br>
+                return valor*2;<br>
+               }<br>
+               // Creamos un array<br>
+               let array_numeros = new Array(5,10,15,20,25);<br>
+               console.log(array_numeros);<br>
+               /* <br>
+               Creamos el nuevo array a partir del anterior y ademas lo <br>
+               modificamos con la función<br>
+               */<br>
+              let nuevoArray_numeros = Array.from(array_numeros,sumaNumeros);<br>
+              console.log(nuevoArray_numeros);  <br>
                 </code>
                 <br>
-                <code id="code18"></code>
             </div>
             <p id="codigo18"></p>
             <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-
-                </code>
-                <br>
-                <code id="code19"></code>
+            <div class="boton-cont">
+                <input type="button" value="Click aquí" class="boton" onclick="ocultar()">
             </div>
-            <p id="codigo19"></p>
-            <br>
-            <h3></h3>
-            <div class="code-cont">
-                <code>
-
-                </code>
-                <br>
-                <code id="code20"></code>
-            </div>
-            <p id="codigo20"></p>
-        </div>
+        </div> 
     </div>
     <script src="JS/creaArrays.js"></script>
 </body>

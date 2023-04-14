@@ -15,6 +15,7 @@ body {
 	background-color: var(--negro);
 	color: var(--blanco);
 	padding: 20px;
+	min-height: 980px;
 }
 
 div {
